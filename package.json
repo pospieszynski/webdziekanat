@@ -1,0 +1,52 @@
+{
+  "name": "webdziekanat",
+  "version": "1.0.0",
+  "description": "Recruitment task for Prme Module company.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.production.config.js --progress --profile --colors --history-api-fallback",
+    "start": "webpack-dev-server --progress --hot --profile --colors --history-api-fallback",
+    "lint": "eslint --ext js --ext jsx src || exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pospieszynski/crazy-frog-task.git"
+  },
+  "keywords": [
+    "react",
+    "frog",
+    "javascript",
+    "recruitment"
+  ],
+  "author": "Wojciech Pośpieszyński",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pospieszynski/crazy-frog-task/issues"
+  },
+  "homepage": "https://github.com/pospieszynski/crazy-frog-task#readme",
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "image-webpack-loader": "^3.0.0",
+    "node-sass": "^3.11.2",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "css-loader": "^0.25.0",
+    "node-sass": "^3.11.2",
+    "react-router": "^3.0.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1"
+  }
+}

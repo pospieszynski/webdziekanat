@@ -1,0 +1,68 @@
+body{
+  background-image: url("../img/webdziekanat.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.ham-icon{
+  width: 64px;
+  height: 64px;
+  background: url("../img/ham-icon-64.png") no-repeat;
+  display: none;
+  cursor: pointer;
+  float: left;
+}
+.close-icon{
+  width: 64px;
+  height: 64px;
+  background: url("../img/close-64.png") no-repeat center;
+  display: none;
+  cursor: pointer;
+  float: right;
+}
+.hideSideNav {
+  display: none;
+}
+
+.showSideNav {
+  display: block;
+}
+
+.sidebar-nav{
+  clear: both;
+  a:link {
+    text-decoration: none;
+  }
+
+  a{
+    color: #2b2828;
+  }
+
+    list-style-type: none;
+
+
+  li{
+    margin: 20px 5px;
+  }
+}
+
+.staticPos{
+  padding-left: 0;
+  text-align: center;
+  position: static;
+}
+
+.fixedPos{
+  position: fixed;
+}
+
+
+@media (max-width: 767px) {
+  .ham-icon{
+    display: block;
+  }
+
+  .close-icon{
+    display: block;
+  }
+}
