@@ -1,7 +1,8 @@
 body{
-  background-image: url("../img/webdziekanat.jpg");
+  background-image: url("../img/wd2.jpg");
   background-size: cover;
   background-attachment: fixed;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .ham-icon{
@@ -20,29 +21,82 @@ body{
   cursor: pointer;
   float: right;
 }
+.show-close-icon{
+  display: block;
+}
 .hideSideNav {
   display: none;
 }
-
 .showSideNav {
   display: block;
 }
 
 .sidebar-nav{
+  list-style-type: none;
   clear: both;
-  a:link {
-    text-decoration: none;
+  padding-left: 10px;
+
+  li {
+    margin-top: 15px;
+    a{
+      font-size: 20px;
+      font-weight: bolder;
+      color: #d6d6d6;
+    }
+    & a:link, a:active, a:visited {
+      text-decoration: none;
+    }
   }
 
-  a{
-    color: #2b2828;
+  .feed-link {
+    padding-left: 26px;
+    background: url("../img/icons/16/feed/rss-1.png") left center no-repeat;
+  }
+  .managed-places-link {
+    padding-left: 26px;
+    background: url("../img/icons/16/exam/closed-notebook-and-pen.png") left center no-repeat;
   }
 
-    list-style-type: none;
+  .followed-places-link {
+    padding-left: 26px;
+    background: url("../img/icons/16/followers/molecule.png") left center no-repeat;
+  }
+
+  .register-place-link {
+      padding-left: 26px;
+      background: url("../img/icons/16/study/flasks.png") left center no-repeat;
+  }
+
+  .settings-link {
+    padding-left: 26px;
+    background: url("../img/icons/16/settings/settings-1.png") left center no-repeat;
+  }
+}
+
+.img-responsive {
+  margin-top: 22px;
+}
 
 
-  li{
-    margin: 20px 5px;
+.identity-info {
+  float: right;
+  text-align: right;
+  margin-right: 20px;
+
+
+  .profile-pic {
+    margin: 25px auto 10px;
+    border-radius: 50%;
+    float: right;
+  }
+
+  .info {
+    font-size: 14px;
+
+    &--colored {
+      font-size: 16px;
+      color: #710200;
+    }
   }
 }
 
@@ -59,10 +113,6 @@ body{
 
 @media (max-width: 767px) {
   .ham-icon{
-    display: block;
-  }
-
-  .close-icon{
     display: block;
   }
 }
