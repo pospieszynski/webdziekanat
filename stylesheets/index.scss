@@ -1,11 +1,20 @@
-body{
-  background-image: url("../img/wd2.jpg");
+body {
+  background: url("../img/webdziekanat2.jpg") center;
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.ham-icon{
+.left-sector {
+  position: fixed;
+}
+
+.right-sector {
+  position: fixed;
+  right: 55px;
+}
+
+.ham-icon {
   width: 64px;
   height: 64px;
   background: url("../img/ham-icon-64.png") no-repeat;
@@ -13,7 +22,8 @@ body{
   cursor: pointer;
   float: left;
 }
-.close-icon{
+
+.close-icon {
   width: 64px;
   height: 64px;
   background: url("../img/close-64.png") no-repeat center;
@@ -21,55 +31,154 @@ body{
   cursor: pointer;
   float: right;
 }
-.show-close-icon{
+
+.show-close-icon {
   display: block;
 }
+
 .hideSideNav {
   display: none;
 }
+
 .showSideNav {
   display: block;
 }
 
-.sidebar-nav{
+.sidebar-nav {
   list-style-type: none;
   clear: both;
   padding-left: 10px;
 
-  li {
-    margin-top: 15px;
-    a{
-      font-size: 20px;
-      font-weight: bolder;
-      color: #d6d6d6;
-    }
-    & a:link, a:active, a:visited {
-      text-decoration: none;
-    }
+  &--pull-right {
+    float: right;
   }
 
   .feed-link {
     padding-left: 26px;
     background: url("../img/icons/16/feed/rss-1.png") left center no-repeat;
+    &:hover {
+      background: url("../img/icons/16/feed/rss-1-hover.png") left center no-repeat;
+    }
   }
-  .managed-places-link {
+  .deadlines-link {
     padding-left: 26px;
-    background: url("../img/icons/16/exam/closed-notebook-and-pen.png") left center no-repeat;
+    background: url("../img/icons/16/events/calendar.png") left center no-repeat;
+    &:hover {
+      background: url("../img/icons/16/events/calendar-hover.png") left center no-repeat;
+    }
   }
 
-  .followed-places-link {
+  .documents-link {
     padding-left: 26px;
-    background: url("../img/icons/16/followers/molecule.png") left center no-repeat;
+    background: url("../img/icons/16/messages/paper-plane.png") left center no-repeat;
+    &:hover {
+      background: url("../img/icons/16/messages/paper-plane-hover.png") left center no-repeat;
+    }
   }
 
   .register-place-link {
-      padding-left: 26px;
-      background: url("../img/icons/16/study/flasks.png") left center no-repeat;
+    padding-left: 26px;
+    background: url("../img/icons/16/study/flasks.png") left center no-repeat;
+  }
+
+  .programs-link {
+    padding-left: 26px;
+    background: url("../img/icons/16/study/flasks.png") left center no-repeat;
+    &:hover {
+      background: url("../img/icons/16/study/flask-hover.png") left center no-repeat;
+    }
+  }
+
+  .fees-link {
+    padding-left: 26px;
+    background: url("../img/icons/16/funds.png") left center no-repeat;
+    &:hover {
+      background: url("../img/icons/16/funds-hover.png") left center no-repeat;
+    }
+  }
+
+  .logout-link {
+    margin-top: 40px !important;
+    padding-left: 26px;
+    //background: url("../img/icons/16/followers/molecule.png") left center no-repeat;
+  }
+
+  .status-link {
+    padding-left: 26px;
+    background: url("../img/icons/16/study/status.png") left center no-repeat;
+    &:hover {
+      background: url("../img/icons/16/study/status-hover.png") left center no-repeat;
+    }
+  }
+
+  .grades-link {
+    padding-left: 26px;
+    background: url("../img/icons/16/exam/grades.png") left center no-repeat;
+    &:hover {
+      background: url("../img/icons/16/exam/grades-hover.png") left center no-repeat;
+    }
+
+  }
+
+  .courses-link {
+    padding-left: 26px;
+    background: url("../img/icons/16/followers/courses.png") left center no-repeat;
+    &:hover {
+      background: url("../img/icons/16/followers/courses-hover.png") left center no-repeat;
+    }
   }
 
   .settings-link {
     padding-left: 26px;
-    background: url("../img/icons/16/settings/settings-1.png") left center no-repeat;
+    background: url("../img/icons/16/settings/settings.png") left center no-repeat;
+    &:hover {
+      background: url("../img/icons/16/settings/settings-hover.png") left center no-repeat;
+    }
+  }
+
+  .enrolment-link {
+    padding-left: 26px;
+    background: url("../img/icons/16/exam/enrolment.png") left center no-repeat;
+    &:hover {
+      background: url("../img/icons/16/exam/enrolment-hover.png") left center no-repeat;
+    }
+  }
+
+  .schedule-link {
+    padding-left: 26px;
+    background: url("../img/icons/16/events/schedule.png") left center no-repeat;
+    &:hover {
+      background: url("../img/icons/16/events/schedule-hover.png") left center no-repeat;
+    }
+  }
+  .logout-link {
+    margin-top: 20px;
+    padding-left: 26px;
+    background: url("../img/icons/logout.png") left center no-repeat;
+    & span {
+      color: #90332c;
+    }
+  }
+
+  li {
+    margin-top: 15px;
+    a {
+      font-size: 17px;
+      font-weight: bolder;
+      color: #d6d6d6;
+      span {
+        position: relative;
+        right: 0;
+        transition: right ease 0.3s;
+      }
+      &:hover span {
+        right: -10px;
+        border-bottom: 2px solid #710200;
+      }
+    }
+    & a:link, a:active, a:visited {
+      text-decoration: none;
+    }
   }
 }
 
@@ -77,12 +186,10 @@ body{
   margin-top: 22px;
 }
 
-
 .identity-info {
   float: right;
   text-align: right;
   margin-right: 20px;
-
 
   .profile-pic {
     margin: 25px auto 10px;
@@ -100,19 +207,28 @@ body{
   }
 }
 
-.staticPos{
+.staticPos {
   padding-left: 0;
   text-align: center;
   position: static;
 }
 
-.fixedPos{
+.fixedPos {
   position: fixed;
 }
 
+.page-content {
+  margin-top: 22px;
+  background: rgba(255, 255, 255, 0.35);
+  height: 85vh;
+  position: fixed;
+  left: 320px;
+  overflow-y: auto;
+  padding: 22px;
+}
 
 @media (max-width: 767px) {
-  .ham-icon{
+  .ham-icon {
     display: block;
   }
 }

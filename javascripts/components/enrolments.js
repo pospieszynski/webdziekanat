@@ -1,0 +1,18 @@
+import React from 'react';
+
+export default class Enrolments extends React.Component {
+  render() {
+    return (
+        <div>
+          <h1>Enrolments</h1>
+          <p>Lorem ipsum dolor sit amet, cons magni nam officia quibusdam,
+            suscipit tempora? Eligendi fugit inventore ipsam iusto nulla saepe veritatis. Eius enim impedit laboriosam
+            obcaecati.</p><p>Adipisci alias consectetur culpa cumque deserunt distinctio facilis labore laborum maiores,
+          minima molestiae neque non obcaecati odio possimus, qui quisquam quo quod reprehenderit saepe sed sunt totam
+          vel. Deserunt, et?</p><p>Animi ducimucusandae sequi? Ab aliquid beatae
+          blanditiis, consectetur debitis dignissimos dolores exercitationem facilis hic impedit, laudantium maxime
+          neque nihil us quidem, rerum unde voluptatibus!</p>
+        </div>
+    )
+  }
+}

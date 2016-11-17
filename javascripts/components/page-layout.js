@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router';
 import PageContent from './page-content';
-
 import styles from '../../stylesheets/index.scss';
+
 
 export default class PageLayout extends React.Component {
 
@@ -49,74 +49,94 @@ export default class PageLayout extends React.Component {
   }
 
   render() {
+
+
+
     return (
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-sm-3">
+            <div className="col-xs-12 col-sm-3 left-sector">
               <div className="ham-icon" onClick={this.toggleSideNav.bind(this)}></div>
               <div className={ "close-icon " + this.state.showCloseIcon } onClick={this.hideSideNav.bind(this)}></div>
-              <img src={'../../img/pł-logo1.png'} className="img-responsive"/>
+              <a href="#">
+                <img src={'../../img/pł-logo1.png'} className="img-responsive"/>
+              </a>
               <ul className={ "sidebar-nav " + this.state.shouldHideNav + this.state.position}>
                 <li className="sidebar-nav__list-item">
-                  <Link onClick={this.hideSideNav.bind(this)} className="feed-link" to="/profile/feed">
-                    Feed
+                  <Link onClick={this.hideSideNav.bind(this)} className="feed-link" to="/profile/announcements">
+                    <span>Announcements</span>
                   </Link>
                 </li>
                 <li>
-                  <Link onClick={this.hideSideNav.bind(this)} className="managed-places-link" to="/profile/places/managed">
-                    Managed Places
+                  <Link onClick={this.hideSideNav.bind(this)} className="deadlines-link" to="/profile/deadlines">
+                    <span>Deadlines</span>
                   </Link>
                 </li>
                 <li>
-                  <Link onClick={this.hideSideNav.bind(this)} className="followed-places-link" to="/profile/places/followed">
-                    Followed Places
+                  <Link onClick={this.hideSideNav.bind(this)} className="documents-link" to="/profile/documents">
+                    <span>Documents</span>
                   </Link>
                 </li>
                 <li>
-                  <Link onClick={this.hideSideNav.bind(this)} className="register-place-link" to="/profile/places/register">
-                    Register new Place
+                  <Link onClick={this.hideSideNav.bind(this)} className="fees-link" to="/profile/fees">
+                    <span>Fees</span>
                   </Link>
                 </li>
                 <li>
-                  <Link onClick={this.hideSideNav.bind(this)} className="settings-link" to="/profile/settings">
-                    Profile Settings
+                  <Link onClick={this.hideSideNav.bind(this)} className="programs-link" to="/profile/programs">
+                    <span>Programs</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link onClick={this.hideSideNav.bind(this)} className="status-link" to="/profile/status">
+                    <span>Status</span>
                   </Link>
                 </li>
               </ul>
             </div>
-            <PageContent>{this.props.children}</PageContent>
-            <div className="col-xs-12 col-sm-3">
+
+              <PageContent>{this.props.children}</PageContent>
+
+            <div className="col-xs-12 col-sm-3 right-sector">
               <div className="identity-info">
-                <img src={'../../img/profile-pic.jpg'} className="profile-pic"/>
-                <div className="info--colored">Wojciech Pośpieszyński</div>
+                <a href="#">
+                  <img src={'../../img/profile-pic.jpg'} className="profile-pic"/>
+                </a>
+                <div className="info--colored"><strong>Wojciech Pośpieszyński</strong></div>
                 <div className="info">Computer Science</div>
                 <div className="info--colored">195932</div>
               </div>
 
-              <ul className={ "sidebar-nav " + this.state.shouldHideNav + this.state.position}>
+              <ul className={ "sidebar-nav sidebar-nav--pull-right " + this.state.shouldHideNav}>
                 <li className="sidebar-nav__list-item">
-                  <Link onClick={this.hideSideNav.bind(this)} className="feed-link" to="/profile/feed">
-                    Feed
+                  <Link onClick={this.hideSideNav.bind(this)} className="grades-link" to="/profile/grades">
+                    <span>Grades</span>
                   </Link>
                 </li>
                 <li>
-                  <Link onClick={this.hideSideNav.bind(this)} className="managed-places-link" to="/profile/places/managed">
-                    Managed Places
+                  <Link onClick={this.hideSideNav.bind(this)} className="courses-link" to="/profile/courses">
+                   <span>Courses</span>
                   </Link>
                 </li>
                 <li>
-                  <Link onClick={this.hideSideNav.bind(this)} className="followed-places-link" to="/profile/places/followed">
-                    Followed Places
+                  <Link onClick={this.hideSideNav.bind(this)} className="enrolment-link" to="/profile/enrolments">
+                    <span>Enrolments</span>
                   </Link>
                 </li>
                 <li>
-                  <Link onClick={this.hideSideNav.bind(this)} className="register-place-link" to="/profile/places/register">
-                    Register new Place
+                  <Link onClick={this.hideSideNav.bind(this)} className="schedule-link" to="/profile/schedule">
+                    <span>Schedule</span>
                   </Link>
                 </li>
                 <li>
                   <Link onClick={this.hideSideNav.bind(this)} className="settings-link" to="/profile/settings">
-                    Profile Settings
+                    <span>Settings</span>
+                  </Link>
+                </li>
+
+                <li className="logout-link">
+                  <Link onClick={this.hideSideNav.bind(this)}  to="#">
+                    <span>Log out</span>
                   </Link>
                 </li>
               </ul>
