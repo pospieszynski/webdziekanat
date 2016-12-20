@@ -12,7 +12,7 @@ export default class PageContent extends React.Component {
 
   render() {
     return (
-        <div className="col-xs-12 col-sm-6 page-content">
+        <div className="col-xs-6 col-sm-6 page-content">
           <div>
           <EasyTransition
               path={location.pathname}
